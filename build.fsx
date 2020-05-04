@@ -63,7 +63,7 @@ Target "UnitTest" (fun _ ->
             Project = "test\\Microsoft.NET.Sdk.Functions.Generator.Tests"
             Configuration = "Debug"})
 
-    DotNetCli.Build (fun p ->
+    DotNetCli.Test (fun p ->
         {p with
             Project = "test\\Microsoft.NET.Sdk.Functions.MSBuild.Tests"
             Configuration = "Debug"})
