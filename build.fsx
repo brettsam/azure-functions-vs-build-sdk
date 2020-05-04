@@ -61,12 +61,12 @@ Target "UnitTest" (fun _ ->
     DotNetCli.Test (fun p ->
         {p with
             Project = "test\\Microsoft.NET.Sdk.Functions.Generator.Tests"
-            Configuration = "Release"})
+            Configuration = "Debug"})
 
-    DotNetCli.Test (fun p ->
+    DotNetCli.Build (fun p ->
         {p with
             Project = "test\\Microsoft.NET.Sdk.Functions.MSBuild.Tests"
-            Configuration = "Release"})
+            Configuration = "Debug"})
 )
 
 Target "GenerateZipToSign" (fun _ ->
