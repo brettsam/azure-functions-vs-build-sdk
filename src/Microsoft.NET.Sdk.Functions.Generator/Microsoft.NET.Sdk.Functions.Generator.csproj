@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>3.0.0</Version>
+    <Version>5.0.0</Version>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
   </PropertyGroup>
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\pack\Microsoft.NET.Sdk.Functions\Microsoft.NET.Sdk.Functions.csproj" />
+    <ProjectReference Include="..\..\pack\Microsoft.NET.Sdk.Functions\Microsoft.NET.Sdk.FunctionsWorker.csproj" />
   </ItemGroup>
 
 </Project>

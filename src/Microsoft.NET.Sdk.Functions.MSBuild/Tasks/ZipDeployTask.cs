@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 using Microsoft.NET.Sdk.Functions.Http;
-using Microsoft.NET.Sdk.Functions.MSBuild.Properties;
+using Microsoft.NET.Sdk.FunctionsWorker.MSBuild.Properties;
 
 namespace Microsoft.NET.Sdk.Functions.Tasks
 {

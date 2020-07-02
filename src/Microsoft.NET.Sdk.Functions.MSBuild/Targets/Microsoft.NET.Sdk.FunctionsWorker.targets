@@ -1,6 +1,6 @@
 <!--
 ***********************************************************************************************
-Microsoft.NET.Sdk.Functions.targets
+Microsoft.NET.Sdk.FunctionsWorker.targets
 
 WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
           created a backup copy.  Incorrect changes to this file will make it
@@ -12,9 +12,9 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
          xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <_FunctionsTaskFramework>netcoreapp3.0</_FunctionsTaskFramework>    
+    <_FunctionsTaskFramework>netstandard2.0</_FunctionsTaskFramework>    
     <_FunctionsTasksDir Condition=" '$(_FunctionsTasksDir)'=='' ">$(MSBuildThisFileDirectory)..\tools\$(_FunctionsTaskFramework)\</_FunctionsTasksDir>
-    <_FunctionsTaskAssemblyFullPath Condition=" '$(_FunctionsTaskAssemblyFullPath)'=='' ">$(_FunctionsTasksDir)\Microsoft.NET.Sdk.Functions.MSBuild.dll</_FunctionsTaskAssemblyFullPath>
+    <_FunctionsTaskAssemblyFullPath Condition=" '$(_FunctionsTaskAssemblyFullPath)'=='' ">$(_FunctionsTasksDir)\Microsoft.NET.Sdk.FunctionsWorker.MSBuild.dll</_FunctionsTaskAssemblyFullPath>
     <DebugSymbols Condition="'$(DebugSymbols)' == ''">true</DebugSymbols>
     <DebugType Condition="'$(DebugType)' == ''">pdbonly</DebugType>
     <IsPackable>false</IsPackable>
@@ -30,25 +30,21 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
   <UsingTask TaskName="ZipDeployTask"
             AssemblyFile="$(_FunctionsTaskAssemblyFullPath)"/>
 
-  <ItemGroup>
-    <ProjectCapability Include="AzureFunctions"/>
-  </ItemGroup>
-
   <!--
   ***********************************************************************************************
   Import the Build target
   ***********************************************************************************************
  -->
-  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Build.targets"
-          Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Build.targets')" />
+  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Build.targets"
+          Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Build.targets')" />
   
   <!--
   ***********************************************************************************************
   Import the Publish target
   ***********************************************************************************************
  -->
-  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Publish.targets"
-          Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Publish.targets')" />
+  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Publish.targets"
+          Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Publish.targets')" />
 
   <!--
   ***********************************************************************************************

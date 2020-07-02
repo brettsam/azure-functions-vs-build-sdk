@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\src\Microsoft.NET.Sdk.Functions.MSBuild\Targets\ExtensionsMetadataGeneratorVersion.props" />
-  <Import Project="..\..\src\Microsoft.NET.Sdk.Functions.MSBuild\Targets\Microsoft.NET.Sdk.Functions.Version.props" />
+  <Import Project="..\..\src\Microsoft.NET.Sdk.Functions.MSBuild\Targets\Microsoft.NET.Sdk.FunctionsWorker.Version.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
-    <PackageName>Microsoft.NET.Sdk.Functions</PackageName>
+    <TargetFrameworks>net5.0</TargetFrameworks>
+    <PackageName>Microsoft.NET.Sdk.FunctionsWorker</PackageName>
     <Version>$(FunctionsSdkVersion)</Version>
     <Authors>Microsoft</Authors>
     <ProjectUrl>https://github.com/Azure/azure-functions-vs-build-sdk</ProjectUrl>
@@ -42,31 +42,31 @@
 
   <ItemGroup>
     <!-- MSBuild task assemblies -->    
-    <None Include="$(FunctionsBuildTaskOutputPath)\netstandard2.0\Microsoft.NET.Sdk.Functions.MSBuild.dll">
+    <None Include="$(FunctionsBuildTaskOutputPath)\netstandard2.0\Microsoft.NET.Sdk.FunctionsWorker.MSBuild.dll">
       <Pack>true</Pack>
-      <PackagePath>tools\netcoreapp3.0\</PackagePath>
+      <PackagePath>tools\netstandard2.0\</PackagePath>
     </None>
 
     <!-- Generator and dependent assemblies-->
-    <None Include="$(FunctionsGeneratorOutputPath)\netcoreapp3.0\Newtonsoft.Json.dll">
+    <None Include="$(FunctionsGeneratorOutputPath)\net5.0\Newtonsoft.Json.dll">
       <Pack>true</Pack>
-      <PackagePath>tools\netcoreapp3.0\</PackagePath>
+      <PackagePath>tools\net5.0\</PackagePath>
     </None>
-    <None Include="$(FunctionsGeneratorOutputPath)\netcoreapp3.0\Mono.Cecil.dll">
+    <None Include="$(FunctionsGeneratorOutputPath)\net5.0\Mono.Cecil.dll">
       <Pack>true</Pack>
-      <PackagePath>tools\netcoreapp3.0\</PackagePath>
+      <PackagePath>tools\net5.0\</PackagePath>
     </None>
-    <None Include="$(FunctionsGeneratorOutputPath)\netcoreapp3.0\Microsoft.NET.Sdk.Functions.Generator.dll">
+    <None Include="$(FunctionsGeneratorOutputPath)\net5.0\Microsoft.NET.Sdk.Functions.Generator.dll">
       <Pack>true</Pack>
-      <PackagePath>tools\netcoreapp3.0\</PackagePath>
+      <PackagePath>tools\net5.0\</PackagePath>
     </None>
-    <None Include="$(FunctionsGeneratorOutputPath)\netcoreapp3.0\Microsoft.NET.Sdk.Functions.Generator.runtimeconfig.json">
+    <None Include="$(FunctionsGeneratorOutputPath)\net5.0\Microsoft.NET.Sdk.Functions.Generator.runtimeconfig.json">
       <Pack>true</Pack>
-      <PackagePath>tools\netcoreapp3.0\</PackagePath>
+      <PackagePath>tools\net5.0\</PackagePath>
     </None>
-    <None Include="$(OutputPath)\netcoreapp3.0\Microsoft.NET.Sdk.Functions.dll">
+    <None Include="$(OutputPath)\net5.0\Microsoft.NET.Sdk.FunctionsWorker.dll">
       <Pack>true</Pack>
-      <PackagePath>tools\netcoreapp3.0\</PackagePath>
+      <PackagePath>tools\net5.0\</PackagePath>
     </None>
   </ItemGroup>
 

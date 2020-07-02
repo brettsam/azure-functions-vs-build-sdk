@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Loader;
 using MakeFunctionJson;
 
 namespace Microsoft.NET.Sdk.Functions.Console
@@ -25,9 +24,9 @@ namespace Microsoft.NET.Sdk.Functions.Console
 
                 IEnumerable<string> excludedFunctionNames = Enumerable.Empty<string>();
 
-                if (args.Length > 2)
+                if (args.Length > 3)
                 {
-                    var excludedFunctionNamesArg = args[2].Trim();
+                    var excludedFunctionNamesArg = args[3].Trim();
                     excludedFunctionNames = excludedFunctionNamesArg.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
                 }
 

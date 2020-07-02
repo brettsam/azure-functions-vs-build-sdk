@@ -1,6 +1,6 @@
 <!--
 ***********************************************************************************************
-Microsoft.NET.Sdk.Functions.Publish.targets
+Microsoft.NET.Sdk.FunctionsWorker.Publish.targets
 
 WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
           created a backup copy.  Incorrect changes to this file will make it
@@ -14,8 +14,8 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
   <Import Sdk="Microsoft.NET.Sdk.Publish"
           Project="Sdk.targets" />
 
-  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Publish.$(PublishProtocol).targets"  
-          Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Publish.$(PublishProtocol).targets')"/>
+  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Publish.$(PublishProtocol).targets"  
+          Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Publish.$(PublishProtocol).targets')"/>
 
   <!--
     ============================================================

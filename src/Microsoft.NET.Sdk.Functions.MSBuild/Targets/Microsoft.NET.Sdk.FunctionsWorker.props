@@ -1,6 +1,6 @@
 ﻿<!--
 ***********************************************************************************************
-Microsoft.NET.Sdk.Functions.props
+Microsoft.NET.Sdk.FunctionsWorker.props
 
 WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
           created a backup copy.  Incorrect changes to this file will make it
@@ -20,21 +20,21 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
   Import the Version Props
   ***********************************************************************************************
   -->
-  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Version.props" Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Version.props')" />
+  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Version.props" Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Version.props')" />
 
   <!--
   ***********************************************************************************************
   Import the Build Props
   ***********************************************************************************************
  -->
-  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Build.props" Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Build.props')" />
+  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Build.props" Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Build.props')" />
 
   <!--
   ***********************************************************************************************
   Import the Publish Props
   ***********************************************************************************************
  -->
-  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Publish.props" Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.Functions.Publish.props')" />
+  <Import Project="$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Publish.props" Condition="Exists('$(MSBuildThisFileDirectory)Microsoft.NET.Sdk.FunctionsWorker.Publish.props')" />
 
   <ItemGroup>
     <None Update="host.json" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always" />

@@ -1,6 +1,6 @@
 ﻿<!--
 ***********************************************************************************************
-Microsoft.NET.Sdk.Functions.Publish.props
+Microsoft.NET.Sdk.Functions.Version.props
 
 WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
           created a backup copy.  Incorrect changes to this file will make it
@@ -10,6 +10,8 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
 -->
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <Import Sdk="Microsoft.NET.Sdk.Publish" Project="Sdk.props" />
-  
+  <PropertyGroup>
+    <FunctionsSdkVersion>5.0.0-preview1</FunctionsSdkVersion>
+  </PropertyGroup>
+
 </Project>

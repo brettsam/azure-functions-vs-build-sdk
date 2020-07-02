@@ -34,7 +34,7 @@ namespace Microsoft.NET.Sdk.Functions.Tasks
         public bool FunctionsInDependencies { get; set; }
 
         private const string NETFrameworkFolder = "net46";
-        private const string NETStandardFolder = "netcoreapp3.0";
+        private const string NETStandardFolder = "net5.0";
 
         public override bool Execute()
         {
